@@ -82,21 +82,21 @@ $(document).ready(function() {
                       element5.classList.remove('hidden');
                       element7.classList.remove('hidden');
 
-                      ramjet.transform(element1, element2, {
+                      ramjet.transform(element2, element1, {
                           done: function() {
                               // this function is called as soon as the transition completes
                               element1.classList.remove('hidden');
                           },
                           duration: 2000,
                       });
-                      ramjet.transform(element3, element4, {
+                      ramjet.transform(element4, element3, {
                           done: function() {
                               // this function is called as soon as the transition completes
                               element3.classList.remove('hidden');
                           },
                           duration: 2000,
                       });
-                      ramjet.transform(element5, element6, {
+                      ramjet.transform(element6, element5, {
                           done: function() {
                               // this function is called as soon as the transition completes
                               element5.classList.remove('hidden');
@@ -104,7 +104,7 @@ $(document).ready(function() {
                           duration: 2000,
                       });
 
-                      ramjet.transform(element7, element8, {
+                      ramjet.transform(element8, element7, {
                           done: function() {
                               // this function is called as soon as the transition completes
                               element7.classList.remove('hidden');
@@ -121,7 +121,7 @@ $(document).ready(function() {
                       element7.classList.add('hidden');
                       element8.classList.add('hidden');
 
-                  }
+                  };
           if (direction == "down") {
 
 
