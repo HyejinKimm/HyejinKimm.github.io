@@ -1,0 +1,47 @@
+@media screen and (max-width:960px){
+  #title{z-index: 0;position: relative;}
+  body {margin-left: 80px;}
+  #een {width: 100%}
+ .tekst {width: 100%; font-size: 40px}
+ .b{margin-top: 100px; float: left}
+ .img {position: relative;}
+ #belgium {left: 0%; margin-top: 100px}
+ #korea {left: 20%;top:80%}
+ #flight {top: 30%;left: 25%!important}
+ #yoga {width: 100%;margin-top: 350px}
+ #bel{height: 150px; width: 35%}
+ #animaltext {width: 100%}
+ #animal {width: 100%}
+ #animalonepos {width: 50%; left: 0%; margin-top: 400px}
+ #animaltwopos {width: 30%; left: 20%}
+ #bacterias {margin-top: 700px}
+ #bacteriaonepos {width: 25%; left: 0%; }
+ #bacteriatwo {width: 100%}
+ #bacteriatwopos {width: 15%;left: 10%}
+ #bacteriathreepos {width: 60%; left: 30%; top:-150px}
+ #textone {float: left; margin-top: 400px;}
+ #bactpartyone {left:0;height: 50px;width: 5%}
+ #bactpartyone img {width: 100%;}
+ #bactpartytwo {left:0;}
+ #bactpartytwo img {top: 0;width: 3%;}
+ #bactpartythree {left:25%; top:-50px;}
+ #bactpartythree img {width: 5%;}
+ #bactpartyfour {left:30%; top:-400px;}
+ #bactpartyfour img {width: 10%;}
+ #partyme {left: 10%;top:0px;width:100%; height: 200px }
+ #texttwo p{font-size: 60px; text-align: left;}
+ #form {margin-left: 0}
+ #form input {width: 300px}
+ #form textarea {width: 300px}
+ #submit {width: 332px!important}
+ h4 {text-align: left}
+}
+
+@media screen and (max-width:640px){
+
+}
+
+
+@media screen and (max-width:480px){
+
+}
