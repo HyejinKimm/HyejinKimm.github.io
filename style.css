@@ -335,9 +335,9 @@ header {
     letter-spacing: 7px;
 }
 
-h4 {
+h3 {
     text-align: center;
-    letter-spacing: 2.5px;
+    font-variant: small-caps;
 }
 
 #form {
