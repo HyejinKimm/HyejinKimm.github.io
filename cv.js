@@ -1,13 +1,13 @@
 $(document).ready(function() {
     var arc_params = {
-        center: [685, -55],
+        center: [685, 100],
         radius: 150,
         start: 30,
         end: 200,
         dir: 1
     };
     var arc_back = {
-        center: [685, -55],
+        center: [685, 100],
         radius: 150,
         start: 200,
         end: 30,
