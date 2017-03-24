@@ -1,18 +1,21 @@
 @media screen and (max-width:960px){
   #title{z-index: 0;position: relative;}
-  body {margin-left: 80px;}
+  body {margin-left: 50px;}
   #een {width: 100%}
- .tekst {width: 100%; font-size: 40px}
+ .tekst {width: 100%; font-size: 50px}
+ .tekst p {line-height: 60px;}
  .b{margin-top: 100px; float: left}
  .img {position: relative;}
  #belgium {left: 0%; margin-top: 100px}
  #korea {left: 20%;top:80%}
  #flight {top: 30%;left: 25%!important}
  #yoga {width: 100%;margin-top: 350px}
- #bel{height: 150px; width: 35%}
+ #bel{height: 150px; width: 50%; }
  #animaltext {width: 100%}
  #animal {width: 100%}
  #animalonepos {width: 50%; left: 0%; margin-top: 400px}
+ #animalonepos img {width: 50%}
+ #animaltwo img {width: 100%}
  #animaltwopos {width: 30%; left: 20%}
  #bacterias {margin-top: 700px}
  #bacteriaonepos {width: 25%; left: 0%; }
@@ -34,11 +37,51 @@
  #form input {width: 300px}
  #form textarea {width: 300px}
  #submit {width: 332px!important}
- h4 {text-align: left}
+ h3 {text-align: left}
 }
 
 @media screen and (max-width:640px){
-
+  #title{z-index: 0;position: relative;}
+  body {margin-left: 50px;}
+  .wrap {width: 360px}
+  #een {width: 100%}
+ .tekst {width: 100%; font-size: 50px;}
+  .tekst p {line-height: 60px;}
+ .b{margin-top: 220px; float: left}
+ .img {position: relative;}
+ #belgium {left: 0%; margin-top: 100px}
+ #korea {left: 20%;top:80%}
+ #flight {top: 30%;left: 25%!important}
+ #yoga {width: 100%;margin-top: 350px}
+ #bel{height: 150px; width: 90%; margin-top: 250px}
+ #animaltext {width: 100%}
+ #animal {width: 100%}
+ #animalonepos {width: 50%; left: 0%; margin-top: 400px}
+ #animaltwopos {width: 60%; left: 40%}
+ #animalonepos img {width: 100%}
+ #animaltwo img {width: 100%}
+ #bacterias {margin-top: 700px}
+ #bacteriaonepos {width: 70%; left: 0%; }
+ #bacteriatwo {width: 100%}
+ #bacteriatwopos {width: 35%;left: 25%}
+ #bacteriathreepos {width: 100%; left: 50%; top:-150px}
+ #textone {float: left; margin-top: 400px;}
+ #bactpartyone {left:0;height: 50px;width: 20%}
+ #bactpartyoneimg {top:50px; position: relative;;}
+ #bactpartyone img {width: 100%;}
+ #bactpartytwo {left:0;}
+ #bactpartytwo img {top: 0;width: 8%;}
+ #bactpartythree {left:45%; top:-50px;}
+ #bactpartythree img {width: 10%;}
+ #bactpartyfour {left:50%; top:-350px;}
+ #bactpartyfour img {width: 25%;}
+ #partyme {left: 10%;top:0px;width:100%; height: 200px }
+ #texttwo p{font-size: 60px; text-align: left;}
+ #form {margin-left: 0}
+ #form input {width: 300px}
+ #form textarea {width: 300px}
+ #submit {width: 332px!important}
+ h3 {text-align: left}
 }
 
 
