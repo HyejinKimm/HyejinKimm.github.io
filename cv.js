@@ -17,15 +17,16 @@ $(document).ready(function() {
     new Waypoint({
         element: document.getElementById('belgium'),
         handler: function(direction) {
-          if (direction == "up") {
-              $("#flight").animate({
-                  path: new $.path.arc(arc_back)
-              });
-          }
+            if (direction == "up") {
+                $("#flight").animate({
+                    path: new $.path.arc(arc_back)
+
+                }, 1500);
+            }
             if (direction == "down") {
                 $("#flight").animate({
                     path: new $.path.arc(arc_params)
-                });
+                }, 1500);
             }
         },
         offset: '50%'
@@ -38,8 +39,12 @@ $(document).ready(function() {
             if (direction == "down") {
                 $("#animalone").addClass("shake-slow shake-constant");
                 $("#animaltwo").addClass("shake shake-constant");
-                setTimeout(function(){$("#animalone").removeClass("shake-slow shake-constant"); }, 1000);
-                setTimeout(function(){$("#animaltwo").removeClass("shake shake-constant"); }, 1000);
+                setTimeout(function() {
+                    $("#animalone").removeClass("shake-slow shake-constant");
+                }, 1000);
+                setTimeout(function() {
+                    $("#animaltwo").removeClass("shake shake-constant");
+                }, 1000);
             }
         },
         offset: '50%'
@@ -53,13 +58,23 @@ $(document).ready(function() {
                 $("#bacteriaone").addClass("shake shake-constant");
                 $("#bacteriatwo").addClass("shake-slow shake-constant");
                 $("#bacteriathree").addClass("shake-little shake-constant");
-                setTimeout(function(){$("#bacteriaone").removeClass("shake shake-constant"); }, 1000);
-                setTimeout(function(){$("#bacteriatwo").removeClass("shake-slow shake-constant"); }, 1000);
-                setTimeout(function(){$("#bacteriathree").removeClass("shake-little shake-constant"); }, 1000);
+                setTimeout(function() {
+                    $("#bacteriaone").removeClass("shake shake-constant");
+                }, 1000);
+                setTimeout(function() {
+                    $("#bacteriatwo").removeClass("shake-slow shake-constant");
+                }, 1000);
+                setTimeout(function() {
+                    $("#bacteriathree").removeClass("shake-little shake-constant");
+                }, 1000);
             }
         },
         offset: '50%'
     });
+
+    var animating = false;
+    var doDown = false;
+    var doUp = false;
 
     var eerstepunt = new Waypoint({
         element: document.getElementsByClassName('center')[0],
@@ -72,59 +87,65 @@ $(document).ready(function() {
                 element6 = document.getElementById('css'),
                 element7 = document.getElementById('bactpartyfourimg'),
                 element8 = document.getElementById('jquery');
-                if (direction == "up") {
 
 
 
-                      // set the stage so ramjet copies the right styles...
-                      element1.classList.remove('hidden');
-                      element3.classList.remove('hidden');
-                      element5.classList.remove('hidden');
-                      element7.classList.remove('hidden');
+            function scrollUp() {
 
-                      ramjet.transform(element2, element1, {
-                          done: function() {
-                              // this function is called as soon as the transition completes
-                              element1.classList.remove('hidden');
-                          },
-                          duration: 2000,
-                      });
-                      ramjet.transform(element4, element3, {
-                          done: function() {
-                              // this function is called as soon as the transition completes
-                              element3.classList.remove('hidden');
-                          },
-                          duration: 2000,
-                      });
-                      ramjet.transform(element6, element5, {
-                          done: function() {
-                              // this function is called as soon as the transition completes
-                              element5.classList.remove('hidden');
-                          },
-                          duration: 2000,
-                      });
+                doUp = false;
+                // set the stage so ramjet copies the right styles...
+                element1.classList.remove('hidden');
+                element3.classList.remove('hidden');
+                element5.classList.remove('hidden');
+                element7.classList.remove('hidden');
 
-                      ramjet.transform(element8, element7, {
-                          done: function() {
-                              // this function is called as soon as the transition completes
-                              element7.classList.remove('hidden');
-                          },
-                          duration: 2000,
-                      });
-                      // ...then hide the original elements for the duration of the transition
-                      element1.classList.add('hidden');
-                      element2.classList.add('hidden');
-                      element3.classList.add('hidden');
-                      element4.classList.add('hidden');
-                      element5.classList.add('hidden');
-                      element6.classList.add('hidden');
-                      element7.classList.add('hidden');
-                      element8.classList.add('hidden');
+                ramjet.transform(element2, element1, {
+                    done: function() {
+                        // this function is called as soon as the transition completes
+                        element1.classList.remove('hidden');
+                    },
+                    duration: 2000,
+                });
+                ramjet.transform(element4, element3, {
+                    done: function() {
+                        // this function is called as soon as the transition completes
+                        element3.classList.remove('hidden');
+                    },
+                    duration: 2000,
+                });
+                ramjet.transform(element6, element5, {
+                    done: function() {
+                        // this function is called as soon as the transition completes
+                        element5.classList.remove('hidden');
+                    },
+                    duration: 2000,
+                });
 
-                  };
-          if (direction == "down") {
+                ramjet.transform(element8, element7, {
+                    done: function() {
+                        // this function is called as soon as the transition completes
+                        element7.classList.remove('hidden');
+                        if (doDown) {
+                            scrollDown();
+                        } else {
+                            animating = false;
+                        }
+                    },
+                    duration: 2000,
+                });
+                // ...then hide the original elements for the duration of the transition
+                element1.classList.add('hidden');
+                element2.classList.add('hidden');
+                element3.classList.add('hidden');
+                element4.classList.add('hidden');
+                element5.classList.add('hidden');
+                element6.classList.add('hidden');
+                element7.classList.add('hidden');
+                element8.classList.add('hidden');
+            };
 
-
+            function scrollDown() {
+                doDown = false;
 
                 // set the stage so ramjet copies the right styles...
                 element2.classList.remove('hidden');
@@ -158,6 +179,12 @@ $(document).ready(function() {
                     done: function() {
                         // this function is called as soon as the transition completes
                         element8.classList.remove('hidden');
+
+                        if (doUp) {
+                            scrollUp();
+                        } else {
+                            animating = false;
+                        }
                     },
                     duration: 2000,
                 });
@@ -171,6 +198,31 @@ $(document).ready(function() {
                 element7.classList.add('hidden');
                 element8.classList.add('hidden');
 
+            };
+
+
+
+            if (direction == "up") {
+                if (!animating) {
+
+                    animating = true;
+                    scrollUp();
+
+                } else {
+                    doUp = true;
+                };
+
+
+            };
+            if (direction == "down") {
+                if (!animating) {
+
+                    animating = true;
+                    scrollDown();
+
+                } else {
+                    doDown = true;
+                }
             }
         },
         offset: '50%'
